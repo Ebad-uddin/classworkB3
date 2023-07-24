@@ -33,72 +33,117 @@
 
 
     //third method
-$fruits[0] = "Grapes";
-$fruits[1] = "apple";
-$fruits[2] = "Banana";
-// echo "<pre>";
-// echo print_r($fruits);
-// echo "</pre>";
+// $fruits[0] = "Grapes";
+// $fruits[1] = "apple";
+// $fruits[2] = "Banana";
+// // echo "<pre>";
+// // echo print_r($fruits);
+// // echo "</pre>";
 
-// Print array by using for loop 
-echo "<h3> Printing array by using for loop</h3>";
-for($i = 0; $i < count($fruits); $i++){
-    echo "$i) $fruits[$i] <br>" ;
-}
-
-
-// while loop
-
-// variable declaration
-// while(condition){
-    //statement
+// // Print array by using for loop 
+// echo "<h3> Printing array by using for loop</h3>";
+// for($i = 0; $i < count($fruits); $i++){
+//     echo "$i) $fruits[$i] <br>" ;
 // }
 
 
-echo "<h3> Printing array by using do-while loop</h3>";
-// while($j < count($fruits)){
-    //     echo "$fruits[$j] <br>";
-    //     $j++;
-    // }
+// // while loop
+
+// // variable declaration
+// // while(condition){
+//     //statement
+// // }
+
+
+// echo "<h3> Printing array by using do-while loop</h3>";
+// // while($j < count($fruits)){
+//     //     echo "$fruits[$j] <br>";
+//     //     $j++;
+//     // }
     
-    // do while
+//     // do while
     
-$j = 0;
-do{
-    echo "$fruits[$j] <br>";
-    $j++;
+// $j = 0;
+// do{
+//     echo "$fruits[$j] <br>";
+//     $j++;
+// }
+// while($j < count($fruits));
+
+// echo "<h3> Printing array by using forEach loop</h3>";
+
+
+// foreach($fruits as $val){
+//     echo "$val <br>";
+// }
+
+
+
+
+
+
+
+// // indexed array , associative array, multidimensional array
+
+// // associative array
+
+// $marks = array(
+//     "physics" => 45,
+//     "CS" => 100,
+//     "English" => 65
+// );
+
+// foreach($marks as $key => $val){
+//     echo "$key = $val <br>";
+// }
+
+// // echo $marks["physics"];
+// // print_r($marks);
+
+
+// // Multidimensional indexed arrays
+// echo "<h3> Multidimensional indexed array</h3>";
+
+// $results = [
+//     [34, 56, 86],
+//     [83, 77, 88],
+//     [23, 99, 88]
+// ];
+
+// echo "<pre>";
+// print_r($results);
+// echo "</pre>";
+
+// foreach($results as $v){
+//     // foreach($v as $e){
+//     //     echo "$e <br>";
+//     // }
+//     echo "<pre>";
+//     print_r($v);
+//     echo "</pre>";
+// }
+
+echo "<h3> Multidimensional associative array</h3>";
+
+$cars = [
+    "Honda" => ["civic" => 10000000, "city" => "6000000", "Accord" => 1500000],
+    "Toyota" => ["Corolla" => 9000000, "Yaris" => 5000000, "Cross" => 1500000]
+];
+echo "<pre>";
+    print_r($cars);
+    echo "</pre>";
+
+foreach($cars as $k => $val){
+    // echo $k;
+    // echo "<pre>";
+    // print_r($val);
+    // echo "</pre>";
+    echo "$k <br>";
+    foreach($val as $name => $price){
+        echo "$name = $price <br>";
+    }
+    
 }
-while($j < count($fruits));
-
-echo "<h3> Printing array by using forEach loop</h3>";
-
-
-foreach($fruits as $val){
-    echo "$val <br>";
-}
-
-
-
-
-
-
-
-// indexed array , associative array, multidimensional array
-
-// associative array
-
-$marks = array(
-    "physics" => 45,
-    "CS" => 100,
-    "English" => 65
-);
-
-foreach($marks as $key => $val){
-    echo "$key = $val <br>";
-}
-
-// echo $marks["physics"];
-// print_r($marks);
 
 
 
