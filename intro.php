@@ -123,27 +123,58 @@
 //     echo "</pre>";
 // }
 
-echo "<h3> Multidimensional associative array</h3>";
 
-$cars = [
-    "Honda" => ["civic" => 10000000, "city" => "6000000", "Accord" => 1500000],
-    "Toyota" => ["Corolla" => 9000000, "Yaris" => 5000000, "Cross" => 1500000]
+// $cars = [
+//     "Honda" => ["civic" => 10000000, "city" => "6000000", "Accord" => 1500000],
+//     "Toyota" => ["Corolla" => 9000000, "Yaris" => 5000000, "Cross" => 1500000]
+// ];
+// echo "<pre>";
+//     print_r($cars);
+//     echo "</pre>";
+
+// foreach($cars as $k => $val){
+    //     // echo $k;
+    //     // echo "<pre>";
+//     // print_r($val);
+//     // echo "</pre>";
+//     echo "$k <br>";
+//     foreach($val as $name => $price){
+//         echo "$name = $price <br>";
+//     }
+
+// }
+
+echo "<h3> Multidimensional indexed array</h3>";
+
+$vegies = [
+    "category-1" => ["veg1" => "Baigan", "veg2" => "Gajar", "veg3" => "Aalu"],
+    "category-2" => ["veg1" => "Loky","veg2" => "tindy", "veg3" => "Mooli"],
+    "category-3" => ["veg1" => "ShimlaMirch", "veg2" => "BariMirch", "veg3" => "KaaliMirch"]
 ];
-echo "<pre>";
-    print_r($cars);
-    echo "</pre>";
 
-foreach($cars as $k => $val){
-    // echo $k;
-    // echo "<pre>";
-    // print_r($val);
-    // echo "</pre>";
-    echo "$k <br>";
-    foreach($val as $name => $price){
-        echo "$name = $price <br>";
-    }
-    
+// $length = count($vegies);
+// echo $length;
+// echo "<pre>";
+// print_r($vegies);
+// echo "</pre>";
+foreach($vegies as $key => $val){
+    echo "<b> $key </b><br>";
+  foreach($val as $k => $v){
+    echo "$k = $v <br>";
+  }
 }
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
