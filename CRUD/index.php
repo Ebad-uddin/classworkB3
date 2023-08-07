@@ -6,10 +6,7 @@
 // mysqli_fetch_assoc --> fetch the associative array
 
 // connection management
-$conn = mysqli_connect("localhost", "root", "", "registration");
-if(!$conn){
-    die("connection failed");
-}
+include('connection.php');
 
 
 

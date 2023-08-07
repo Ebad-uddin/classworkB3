@@ -1,5 +1,5 @@
 <?php
-$conn = mysqli_connect("localhost", "root", "", "classB3");
+$conn = mysqli_connect("localhost", "root", "", "registration");
 if(!$conn){
     die("connection failed");
 }

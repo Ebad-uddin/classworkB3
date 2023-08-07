@@ -35,6 +35,8 @@ if(mysqli_num_rows($data) > 0){
         <th>Name</th>
         <th>Age</th>
         <th>Gender</th>
+        <th>UPDATE DATA</th>
+        <th>DELETE DATA</th>
     </thead>
     <tbody>
 <?php
@@ -45,6 +47,9 @@ while($row = mysqli_fetch_assoc($data)){
             <td><?php echo $row['name'];?></td>
             <td><?php echo $row['age'];?></td>
             <td><?php echo $row['gender'];?></td>
+            <td><a href="update.php?id=<?php echo $row['id'];?>" class="btn btn-warning"> UPDATE </a></td>
+            <td><a href="" class="btn btn-danger"> DELETE </a></td>
+            
             
         </tr>
         <?php
