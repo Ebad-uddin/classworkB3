@@ -1,18 +1,17 @@
 <?php
-// print_r($_POST);
 include('connection.php');
-$id = $_POST['id'];
-$name = $_POST['name'];
-$age = $_POST['age'];
-$gender = $_POST['gender'];
 
+// print_r($_POST);
+$userid = $_POST['id'];
+$username = $_POST['name'];
+$userage = $_POST['age'];
+$usergender = $_POST['gender'];
 
-    $updatequery =  "update usersb3 set name = '$name', age = '$age', gender = '$gender' WHERE id = '$id'";
-
-    $result = mysqli_query($conn, $updatequery);
-    if(!$result){
-        die("query failed");
-    } 
-    header('location:http://localhost:82/classb3/crud/allusers.php');
+$update = "update usersb3 set name = '$username', age = '$userage', gender = '$usergender' where id = $userid";
+$res = mysqli_query($conn, $update);
+if(!$res){
+    die("query failed");
+}
+header('location:http://localhost:82/classb3/crud/allusers.php')
 
 ?>

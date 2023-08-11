@@ -1,24 +1,16 @@
 <?php
 include('connection.php');
-
- $user_id = $_GET['id'];
-
- $query = "select * from `usersb3` where id = '{$user_id}'";
- $res = mysqli_query($conn, $query);
- if(!$res){
+$user_id = $_GET['id'];
+// echo $user_id;
+$updateSql = "select * from `usersb3` where id = '$user_id'";
+$data = mysqli_query($conn, $updateSql);
+if(!$data){
     die("query failed");
- }
- if(mysqli_num_rows($res) > 0){
-    // $row = mysqli_fetch_assoc($res);
-    // print_r($row);
-    while($row = mysqli_fetch_assoc($res)){
+}
+if(mysqli_num_rows($data) > 0){
 
-    
-
-
-
+    while($row = mysqli_fetch_assoc($data)){
 ?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -30,29 +22,26 @@ include('connection.php');
     <title>Form handling </title>
 </head>
 <body>
-
 <div class="container">
 <h1>Update Details </h1>
 <form action="updatedata.php" class="form-group" method="post">
 <label for="name"> Name </label>
-<input type="hidden" name="id" class="form-control" value="<?php echo $row['id']?>">
-<input type="text" name="name" class="form-control" value="<?php echo $row['name']?>">
+<input type="hidden" name="id" class="form-control" value="<?php echo $row['id']?>" >
+<input type="text" name="name" class="form-control" value="<?php echo $row['name']?>" >
 <br>
 <label for="age"> Age </label>
-<input type="number" name="age" class="form-control" value="<?php echo $row['age']?>">
+<input type="number" name="age" class="form-control" value="<?php echo $row['age']?>" >
 <br>
 <label for="gender"> gender </label>
-<input type="text" name="gender" class="form-control" value="<?php echo $row['gender']?>">
+<input type="text" name="gender" class="form-control" value="<?php echo $row['gender']?>" >
 <br>
 <input type="submit" name="submit" value="Update" class="btn btn-primary">
-
 </form>
-    
-
-<?php
+    <?php
 }
- }
+}
 
 ?>
+
 </body>
 </html>

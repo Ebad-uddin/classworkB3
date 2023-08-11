@@ -3,19 +3,10 @@ $conn = mysqli_connect("localhost", "root", "", "registration");
 if(!$conn){
     die("connection failed");
 }
-
 $sqlquery = "Select * from `usersb3`";
 $data = mysqli_query($conn, $sqlquery);
-
 if(mysqli_num_rows($data) > 0){
-
-   
-
-
-
-
 ?>
-
 
 <!DOCTYPE html>
 <html lang="en">
@@ -28,7 +19,6 @@ if(mysqli_num_rows($data) > 0){
     <title>Form handling </title>
 </head>
 <body>
-
 <table class="table table-bordered text-center">
     <thead class="table table-dark">
         <th>ID</th>
@@ -47,8 +37,8 @@ while($row = mysqli_fetch_assoc($data)){
             <td><?php echo $row['name'];?></td>
             <td><?php echo $row['age'];?></td>
             <td><?php echo $row['gender'];?></td>
-            <td><a href="update.php?id=<?php echo $row['id'];?>" class="btn btn-warning"> UPDATE </a></td>
-            <td><a href="" class="btn btn-danger"> DELETE </a></td>
+            <td><a href="update.php?id=<?php echo $row['id']?>" class="btn btn-warning"> UPDATE </a></td>
+            <td><a href="delete.php?id=<?php echo $row['id']?>" class="btn btn-danger"> DELETE </a></td>
             
             
         </tr>
