@@ -1,4 +1,7 @@
 <?php
+
+include('header.php');
+
 $conn = mysqli_connect("localhost", "root", "", "registration");
 if(!$conn){
     die("connection failed");
@@ -19,10 +22,12 @@ if(mysqli_num_rows($data) > 0){
     <title>Form handling </title>
 </head>
 <body>
+
 <table class="table table-bordered text-center">
     <thead class="table table-dark">
         <th>ID</th>
         <th>Name</th>
+        <th>Email</th>
         <th>Age</th>
         <th>Gender</th>
         <th>UPDATE DATA</th>
@@ -35,6 +40,7 @@ while($row = mysqli_fetch_assoc($data)){
         <tr>
             <td><?php echo $row['id'];?></td>
             <td><?php echo $row['name'];?></td>
+            <td><?php echo $row['email'];?></td>
             <td><?php echo $row['age'];?></td>
             <td><?php echo $row['gender'];?></td>
             <td><a href="update.php?id=<?php echo $row['id']?>" class="btn btn-warning"> UPDATE </a></td>
