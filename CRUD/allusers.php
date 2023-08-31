@@ -2,12 +2,12 @@
 
 include('header.php');
 
-$conn = mysqli_connect("localhost", "root", "", "registration");
-if(!$conn){
-    die("connection failed");
-}
-$sqlquery = "Select * from `usersb3`";
+include('connection.php');
+
+$sqlquery = "Select * from `usersb3` WHERE `status` =1";
 $data = mysqli_query($conn, $sqlquery);
+// print_r($data);
+// die();
 if(mysqli_num_rows($data) > 0){
 ?>
 
@@ -31,7 +31,8 @@ if(mysqli_num_rows($data) > 0){
         <th>Age</th>
         <th>Gender</th>
         <th>UPDATE DATA</th>
-        <th>DELETE DATA</th>
+        <!-- <th>DELETE DATA</th> -->
+        <th> Soft DELETE </th>
     </thead>
     <tbody>
 <?php
@@ -44,7 +45,8 @@ while($row = mysqli_fetch_assoc($data)){
             <td><?php echo $row['age'];?></td>
             <td><?php echo $row['gender'];?></td>
             <td><a href="update.php?id=<?php echo $row['id']?>" class="btn btn-warning"> UPDATE </a></td>
-            <td><a href="delete.php?id=<?php echo $row['id']?>" class="btn btn-danger"> DELETE </a></td>
+            <!-- <td><a href="delete.php?id=<?php echo $row['id']?>" class="btn btn-danger"> DELETE </a></td> -->
+            <td><a href="softdelete.php?id=<?php echo $row['id']?>" class="btn btn-danger"> DELETE</a></td>
             
             
         </tr>

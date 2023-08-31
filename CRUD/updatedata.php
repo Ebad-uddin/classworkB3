@@ -12,6 +12,6 @@ $res = mysqli_query($conn, $update);
 if(!$res){
     die("query failed");
 }
-header('location:http://localhost:82/classb3/crud/allusers.php')
+header('location:http://localhost:82/classb3/crud/allusers.php');
 
 ?>

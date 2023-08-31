@@ -1,8 +1,8 @@
 <?php
 
-// echo "Hello World " . "another statement <br>";
+echo "Hello World " . "another statement <br>";
 
-// // print "print statement" . "another";
+print "print statement" . "another";
 
 // $str = "ebad";  //string
 // echo "i am ".$str . "<br>";
@@ -144,31 +144,54 @@
 
 // }
 
-echo "<h3> Multidimensional indexed array</h3>";
+// echo "<h3> Multidimensional indexed array</h3>";
+
+// $vegies = [
+//     "category-1" => ["veg1" => "Baigan", "veg2" => "Gajar", "veg3" => "Aalu"],
+//     "category-2" => ["veg1" => "Loky","veg2" => "tindy", "veg3" => "Mooli"],
+//     "category-3" => ["veg1" => "ShimlaMirch", "veg2" => "BariMirch", "veg3" => "KaaliMirch"]
+// ];
+
+// // $length = count($vegies);
+// // echo $length;
+// // echo "<pre>";
+// // print_r($vegies);
+// // echo "</pre>";
+// foreach($vegies as $key => $val){
+//     echo "<b> $key </b><br>";
+//   foreach($val as $k => $v){
+//     echo "$k = $v <br>";
+//   }
+// }
+
+
+// $array = array("ebad", "ali", "usman");
+
+// foreach ($array as $key) {
+//   echo $key;
+// }
 
 $vegies = [
-    "category-1" => ["veg1" => "Baigan", "veg2" => "Gajar", "veg3" => "Aalu"],
-    "category-2" => ["veg1" => "Loky","veg2" => "tindy", "veg3" => "Mooli"],
-    "category-3" => ["veg1" => "ShimlaMirch", "veg2" => "BariMirch", "veg3" => "KaaliMirch"]
+  "category-1" => ["veg1" => "Baigan", "veg2" => "Gajar", "veg3" => "Aalu"],
+  "category-2" => ["veg1" => "Loky","veg2" => "tindy", "veg3" => "Mooli"],
+  "category-3" => ["veg1" => "ShimlaMirch", "veg2" => "BariMirch", "veg3" => "KaaliMirch"]
 ];
 
-// $length = count($vegies);
-// echo $length;
-// echo "<pre>";
-// print_r($vegies);
-// echo "</pre>";
-foreach($vegies as $key => $val){
-    echo "<b> $key </b><br>";
-  foreach($val as $k => $v){
-    echo "$k = $v <br>";
-  }
+// foreach($vegies as $k => $v){
+//   echo "$k = $v . <br>"; 
+// }
+
+$arr = [1,2,3,4,5];
+for($i = 0; $i < count($arr); $i++){
+echo $arr[$i];
 }
 
 
 
-
-
-
+function fullname ($firstname, $lastname){
+echo $firstname . $lastname;  
+}
+fullname("Al", "ahmed");
 
 
 
